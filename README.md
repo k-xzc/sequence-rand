@@ -4,12 +4,12 @@
 
 ### Example :
 
-Enter first number : 1
-Enter second number : 6
-The order of range of two given number :
-[1 2 3 4 5 6]
-The shuffle of range of two given number :
-[4 5 1 6 2 3]
+Enter first number : 1 <br/>
+Enter second number : 6 <br/>
+The order of range of two given number : <br/>
+[1 2 3 4 5 6]  <br/>
+The shuffle of range of two given number :  <br/>
+[4 5 1 6 2 3]  <br/>
 
 ### How to build :
 

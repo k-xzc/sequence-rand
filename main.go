@@ -14,8 +14,8 @@ func main(){
 	fmt.Print("Enter second number : ")
 	secondNum := CheckInput()
 	minNum , maxNum := CheckMinMaxNum(firstNum,secondNum)
-	orderNum := CreateNumber(CheckMinMaxNum(minNum,maxNum))
-	shuffleNum := Shuffle(orderNum)
+	orderNum := CreateOrderNumber(CheckMinMaxNum(minNum,maxNum))
+	shuffleNum := CreateShuffleNumber(orderNum)
 	fmt.Println("The order of range of two given number : ")
 	fmt.Println(orderNum)
 	fmt.Println("The shuffle of range of two given number : ")
@@ -46,15 +46,15 @@ func CheckMinMaxNum(minNum int, maxNum int) (int,int){
 	return minNum,maxNum
 }
 
-func CreateNumber(minNum int,maxNum int)[]int {
-	var sliceNum []int
+func CreateOrderNumber(minNum int,maxNum int)[]int {
+	var orderNum []int
 	for i:=0 ; i <= maxNum-minNum ; i++{
-		sliceNum=append(sliceNum,i+minNum)
+		orderNum=append(orderNum,i+minNum)
 	}
-	return sliceNum
+	return orderNum
 }
 
-func Shuffle(orderNum []int)[]int {
+func CreateShuffleNumber(orderNum []int)[]int {
 	r := rand.New(rand.NewSource(time.Now().Unix()))
 	var shuffleNum []int
 	for _, i := range r.Perm(len(orderNum)){
